@@ -1,2 +1,0 @@
-# frontendSide
-frontendSide
