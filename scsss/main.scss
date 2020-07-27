@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.menu-bar {
+    background-color:#1f2021; 
+    text-align: center;
+    
+    ul {
+        display: inline-flex;
+        color: white;
+        list-style-type: none;
+        
+        :active, :hover{
+            background-color: black ;
+            border-radius: 5px;
+    }
+        li {
+            width: 130px;
+            padding: 15px;
+            
+            &:hover .sub-menu{
+                position: absolute;
+                display: block;
+                width: 150px;
+
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                margin: 15px;
+
+            }
+        }
+    }
+}
+
+.sub-menu {
+    display: none;
+
+    ul {
+        display: block;
+    }
+}
+

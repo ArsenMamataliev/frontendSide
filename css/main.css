@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+.menu-bar {
+  background-color: #1f2021;
+  text-align: center;
+}
+
+.menu-bar ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: white;
+  list-style-type: none;
+}
+
+.menu-bar ul :active, .menu-bar ul :hover {
+  background-color: black;
+  border-radius: 5px;
+}
+
+.menu-bar ul li {
+  width: 130px;
+  padding: 15px;
+}
+
+.menu-bar ul li:hover .sub-menu {
+  position: absolute;
+  display: block;
+  width: 150px;
+}
+
+.menu-bar ul li a {
+  text-decoration: none;
+  color: white;
+  margin: 15px;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.sub-menu ul {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */
