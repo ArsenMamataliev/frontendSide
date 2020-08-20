@@ -4,33 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <title>Document</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Super Store</title>
 </head>
 <body>
+    <div class="header">    
+        <img src="./src/icons/Logo.jpg" alt="Logo">
+        <input type="text" placeholder="Searching" >
+        <span class="fa fa-search" style= "font-size:25px; color: white"></span>
+        <div class="user-settings">
+            <a href=""><span class="fa fa-shopping-cart"></span></a>
+            <a href=""><span class="fa fa-user"></span></a>
+            <a href=""><span class="fa fa-sign-in"></span></a>
+        </div>   
+    </div>
     <div class="menu-bar">
         <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Products</a>
-            <div class="sub-menu">
-                <ul>
-                    <li>Android</li>
-                    <li>Mac</li>
-                    <li>Apple</li>
-                </ul>
-            </div>
-            </li>
-            <li><a href="#">About</a></li>
+            <li class="active"><a href="index.html">Laptops</a></li>
+            <li><a href="phones.html">Phones</a></li>
+            <li><a href="view.html">About</a></li>
             <li><a href="#">Contacts</a></li>
         </ul>
     </div>
-    <div class="productContainer">
-    <div id="productPhoto">
-    <a href="/src/product/ArchosA9PCtablet.jpg"></a>
+    <div class="product-container">
+           <div class="product">
+            <div class="product-photo">
+            <a href=""><img src="src/Laptops/ArchosA9PCtablet.jpg" alt="ArchosA9PCtablet"></a>
+            </div>
+            <div class="product-category-name">
+                <small>Archos</small>
+                <span class="fa fa-heart fa-2x"></span>
+            </div>
+            <div class="product-info">
+                <p id="product-name">Archos A9 PCtablet</p>
+            <div class="product-price-card">
+                <span id="product-price">12 500 c</span>
+                <span id="add-to-basket"><a href="">add to <i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+            </div>
+        </div>
+        </div>
+        <div class="product">
+            <div class="product-photo">
+            <a href=""><img src="src/Laptops/Ноутбук HP Compaq Mini 5103.jpg" alt="Ноутбук HP Compaq Mini 5103"></a>
+            </div>
+            <div class="product-category-name">
+                <small>HP</small>
+                <span class="fa fa-heart fa-2x"></span>
+            </div>
+            <div class="product-info">
+                <p id="product-name">Ноутбук HP Compaq Mini 5103</p>
+            <div class="product-price-card">
+                <span id="product-price">28 500 c</span>
+                <span id="add-to-basket"><a href="">add to <i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+            </div>
+         </div>
+        </div>
+        <div class="product">
+            <div class="product-photo">
+            <a href=""><img src="src/Laptops/Моноблок MSI Wind Top AP1920 Black.jpg" alt="Моноблок MSI Wind Top AP1920 Black"></a>
+            </div>
+            <div class="product-category-name">
+                <small>MSI Wind</small>
+                <span class="fa fa-heart fa-2x"></span>
+            </div>
+            <div class="product-info">
+                <p id="product-name">Monoblock MSI Wind Top AP1920 Black</p>
+            <div class="product-price-card">
+                <span id="product-price">16 560 c</span>
+                <span id="add-to-basket"><a href="">add to <i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+            </div>
+        </div>
+        </div>
+        <div class="product">
+            <div class="product-photo">
+            <a href=""><img src="src/Laptops/Ноутбук Samsung 300U1A-A01.jpg" alt="Ноутбук Samsung 300U1A-A01"></a>
+            </div>
+            <div class="product-category-name">
+                <small>Samsung</small>
+                <span class="fa fa-heart fa-2x"></span>
+            </div>
+            <div class="product-info">
+                <p id="product-name">Ноутбук HP Compaq Mini 5103</p>
+            <div class="product-price-card">
+                <span id="product-price">17 570 c</span>
+                <span id="add-to-basket"><a href="">add to <i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+            </div>
+        </div>
+        </div>
+        <div class="product">
+                <div class="product-photo">
+                <a href=""><img src="src/Laptops/Apple iMac with Retina 5K Display.jpg" alt="Apple iMac with Retina 5K Display"></a>
+                </div>
+                <div class="product-category-name">
+                    <small>Apple</small>
+                    <span class="fa fa-heart fa-2x"></span>
+                </div>
+                <div class="product-info">
+                    <p id="product-name">Apple iMac with Retina 5K Display</p>
+                <div class="product-price-card">
+                    <span id="product-price">2 500 $</span>
+                    <span id="add-to-basket"><a href="">add to basket</a></span>
+                </div>
+            </div>
+            </div>
+        <div class="product">
+            <div class="product-photo">
+            <a href=""><img src="src/Laptops/New Apple iMac Pro.png" alt="New Apple iMac Pro"></a>
+            </div>
+            <div class="product-category-name">
+                <small>Apple</small>
+                <span class="fa fa-heart fa-2x"></span>
+            </div>
+            <div class="product-info">
+                <p id="product-name">New Apple iMac Pro</p>
+            <div class="product-price-card">
+                <span id="product-price">499. 99 $</span>
+                <span id="add-to-basket"><a href="">add to basket</a></span>
+            </div>
+        </div>
+        </div>
+        <div class="product">
+            <div class="product-photo">
+            <a href=""><img src="src/Laptops/Microsoft Surface Studio 2.jpg" alt="Microsoft Surface Studio 2"></a>
+            </div>
+            <div class="product-category-name">
+                <small>Microsoft</small>
+                <span class="fa fa-heart fa-2x"></span>
+            </div>
+            <div class="product-info">
+                <p id="product-name">Microsoft Surface Studio 2</p>
+            <div class="product-price-card">
+                <span id="product-price">3 500 $</span>
+                <span id="add-to-basket"><a href="">add to basket</a></span>
+            </div>
+        </div>
+        </div>
     </div>
-    <p id="productName"><Планшет Archos A9 PCtablet/p>
-    <span id="productPrice">12 500 c</span>
-    <span>to Basket</span>
     </div>
-    
+    <footer>
+
+    </footer>
+     
 </body>
+
 </html>

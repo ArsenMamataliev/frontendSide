@@ -1,55 +1,225 @@
 * {
-  padding: 0;
-  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
-  font-size: 15px;
-  font-family: sans-serif;
+  font-family: Roboto;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
 }
 
-.menu-bar {
-  background-color: #1f2021;
+.header {
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.header img {
+  height: 40px;
+  width: 60px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.header input {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  padding: 5px;
+  height: 30px;
+  width: 300px;
+  border: 1px solid #dbd9d3;
+  border-width: 1px 1px;
+  border-radius: 40px;
+}
+
+.header input:hover, .header input:active, .header input :focus {
+  border: 1px solid #09ba38;
+  border-width: 1px 1px;
+  border-radius: 40px;
+}
+
+.header .fa-search {
+  -ms-grid-column-align: left;
+      justify-self: left;
+  background: #09ba38;
+  margin-left: -20px;
+  border-width: 1px 1px;
+  border-radius: 40px;
+  width: 100px;
+  height: 30px;
   text-align: center;
 }
 
+.header .fa-search:hover {
+  background: #045913;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header .user-settings {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.header .user-settings a {
+  text-decoration: none;
+  color: #09ba38;
+  font-size: 25px;
+}
+
+.header .user-settings a:hover {
+  color: #045913;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.menu-bar {
+  background: #09ba38;
+  text-align: center;
+  width: 100%;
+}
+
 .menu-bar ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (150px)[4];
+      grid-template-columns: repeat(4, 150px);
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar li {
+  padding: 10px 0;
+  font-family: "UbuntuLight";
+  letter-spacing: 1px;
   list-style-type: none;
 }
 
-.menu-bar ul :active, .menu-bar ul :hover {
-  background-color: black;
-  border-radius: 5px;
-}
-
-.menu-bar ul li {
-  width: 130px;
-  padding: 15px;
-}
-
-.menu-bar ul li:hover .sub-menu {
-  position: absolute;
-  display: block;
-  width: 150px;
-}
-
-.menu-bar ul li a {
+.menu-bar li a {
   text-decoration: none;
   color: white;
-  margin: 15px;
 }
 
-.sub-menu {
-  display: none;
+.menu-bar ul li:hover {
+  background: #045913;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.sub-menu ul {
+.active {
+  background: #045913;
+}
+
+.product-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (350px)[2];
+      grid-template-rows: repeat(2, 350px);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  grid-gap: 20px;
+  background: #edebe6;
+  padding: 10px;
+  margin: auto;
+  width: 90%;
+  height: auto;
+}
+
+.product {
+  background: white;
+  padding: 10px;
+}
+
+.product:hover {
+  -webkit-box-shadow: 0px 0px 5px 5px #c9c6bd;
+          box-shadow: 0px 0px 5px 5px #c9c6bd;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.product-photo {
+  width: 100%;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.product-photo a img {
+  max-width: 95%;
+  max-height: 95%;
   display: block;
+  margin: 0 auto;
+}
+
+.product-photo a img:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-category-name {
+  margin: 10px 0;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.product-category-name span {
+  float: right;
+  margin-right: 10px;
+  color: red;
+}
+
+.product-info #product-name {
+  font-family: Roboto;
+  font-size: 16px;
+  height: 40px;
+}
+
+.product-info .product-price-card span {
+  height: 30px;
+  padding: 5px 10px;
+}
+
+.product-info .product-price-card #product-price {
+  letter-spacing: 1.5px;
+  float: left;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.product-info .product-price-card #add-to-basket {
+  float: right;
+  background: #09ba38;
+  border: none;
+  border-width: 2px 4px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.product-info .product-price-card #add-to-basket:hover {
+  background: #045913;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.product-info .product-price-card #add-to-basket a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  width: 100%;
+  height: 60px;
+  background: #119935;
 }
 /*# sourceMappingURL=main.css.map */
