@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-   
+    <link rel="stylesheet" href="./css/view.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
@@ -14,31 +14,65 @@
 </head>
 <body>
     <div class="header">    
-        <img src="./src/icons/Logo.jpg" alt="Logo">
+        <a href="laptops.html"><img src="./src/icons/Logo.jpg" alt="Logo"></a>
         <input type="text" placeholder="Searching" >
         <span class="fa fa-search" style= "font-size:25px; color: white"></span>
         <div class="user-settings">
-            <a href=""><span class="fa fa-shopping-cart"></span></a>
+            <a href=""><span class="fa fa-shopping-cart"></span><span id="shopping-cart-counter">0</span></a>
+            <a href=""><span class="fa fa-heart"></span><span id="favorite-item-counter">0</span></a>
             <a href=""><span class="fa fa-user"></span></a>
             <a href=""><span class="fa fa-sign-in"></span></a>
         </div>   
     </div>
     <div class="menu-bar">
         <ul>
-            <li class="active"><a href="index.html">Laptops</a></li>
+            <li class="active"><a href="laptops.html">Laptops</a></li>
             <li><a href="phones.html">Phones</a></li>
-            <li><a href="view.html">About</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Contacts</a></li>
         </ul>
     </div>
-    <div class="view-box">
-    <div>Photo</div>
-    <div>Description</div>
-    <div>Slider</div>
-    <div>Preperties Line</div>
-    <div>Text</div>
-    </div>
+    <div class="grid-container">
+        <div class="photo">
+            <div class="slideshow-container"></div>
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="./src/view/Archos/1.jpg">
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="./src/view/Archos/2.jpg" >
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="./src/view/Archos/3.jpg">
+              </div>
 
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="./src/view/Archos/4.jpg">
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"><img src="./src/view/Archos/1.jpg"></span> 
+                <span class="dot" onclick="currentSlide(2)"><img src="./src/view/Archos/2.jpg"></span> 
+                <span class="dot" onclick="currentSlide(3)"><img src="./src/view/Archos/3.jpg"></span> 
+                <span class="dot" onclick="currentSlide(4)"><img src="./src/view/Archos/4.jpg"></span> 
+              </div>
+        </div>
+        <div class="description">
+        </div>
+        <div class="menu">4</div>
+        <div class="properties">5</div>
+      </div>
+    <script src="./JS/view.js"></script>
 
     <footer>
 

@@ -1,0 +1,130 @@
+@use 'laptops';
+$productContainerBgColor: #edebe6;
+$productBoxBgColor: White;
+$sliderBgColor: #edebe6;
+    
+.grid-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: 
+        'photo description'
+        'menu menu' 
+        'properties properties';
+      grid-gap: 10px;
+      background-color:$productContainerBgColor;
+      padding: 10px;
+ 
+    .grid-container > div {
+      text-align: center;
+      padding: 10px 0;
+    }
+}
+    .photo {
+        grid-area: photo;
+        background: base.$productBoxBgColor;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 100%;
+            position: relative;
+            margin: auto;
+        }
+       
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: #09ba38;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next { 
+            position: absolute;
+            left: 630px;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: #09ba38;
+            color: white;
+        }
+    
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #09ba38;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 60px;
+            width: 80px;
+            margin: 0 2px;
+            background-color: #bbb;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .prev, .next,.text {font-size: 11px}
+ 
+        }    
+
+  .description{
+    grid-area: description;
+}
+  .menu{
+    grid-area: menu;
+  } 
+  .properties{
+    grid-area: properties;
+}
