@@ -11,6 +11,7 @@
 }
 
 .grid-container .grid-container > div {
+  border: 2px solid RED;
   text-align: center;
   padding: 10px 0;
 }
@@ -20,7 +21,6 @@
   -ms-grid-column: 1;
   grid-area: photo;
   background: White;
-  width: 100%;
   height: auto;
   position: relative;
 }
@@ -134,6 +134,8 @@
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: description;
+  width: 50%;
+  border: 2px solid blue;
 }
 
 .menu {

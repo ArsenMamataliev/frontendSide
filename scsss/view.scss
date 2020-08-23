@@ -15,14 +15,14 @@ $sliderBgColor: #edebe6;
       padding: 10px;
  
     .grid-container > div {
+        border: 2px solid RED;
       text-align: center;
       padding: 10px 0;
     }
 }
     .photo {
         grid-area: photo;
-        background: base.$productBoxBgColor;
-        width: 100%;
+        background: $productBoxBgColor;
         height: auto;
         position: relative;
     }
@@ -121,6 +121,8 @@ $sliderBgColor: #edebe6;
 
   .description{
     grid-area: description;
+    width: 50%;
+    border: 2px solid blue;
 }
   .menu{
     grid-area: menu;
