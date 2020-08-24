@@ -11,11 +11,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Super Store</title>
 </head>
-<body>
+<body>  
+    <span class="fa fa-bars"></span>
     <div class="header">    
         <a href="index.html"><img src="./src/icons/Logo.jpg" alt="Logo"></a>
-        <input type="text" placeholder="Searching" >
-        <span class="fa fa-search" style= "font-size:25px; color: white"></span>
+        <div class="search-area" >
+            <input type="text" placeholder="Searching" >
+             <button>Search</button>
+        </div>
         <div class="user-settings">
             <a href=""><span class="fa fa-shopping-cart"></span><span id="shopping-cart-counter">0</span></a>
             <a href=""><span class="fa fa-heart"></span><span id="favorite-item-counter">0</span></a>
@@ -31,7 +34,7 @@
             <li><a href="contacts.html">Contacts</a></li>
         </ul>
     </div>
-    
+
     <div class="product-container">
            <div class="product">
             <div class="product-photo">
@@ -105,8 +108,36 @@
         <li class="page-item"><a class="page-link" href="#">Next</a></li>
       </ul>
       <a href="phones.html"><span class="fa fa-arrow-circle-up" style="font-size:45px;"></span></a>
-    <footer>
+      <footer>
+        <div class="footer-box">
+        <div>
+            <img src="./src/icons/Logo.jpg" alt="logo">
+            <h5>We are always with you</h5>
+        </div>
+        <div>
+            <ul>
+                <li><a href="index.html">Laptops</a></li>
+                <li><a href="phones.html">Phones</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </div>
+        <div>
+            <h6>We accept </h6>
+            <span class="fa fa-cc-visa fa-2x"></span>
+			<span class="fa fa-cc-mastercard fa-2x"></span>
+			<span class="fa fa-paypal fa-2x"></span>
+			<span class="fa fa-bitcoin fa-2x"></span>   
 
+        </div>
+        <div> 
+            <h6> Please visit us</h6>
+			<a style="text-decoration: none; margin-right: 12px;color:#0d9fde;"href="#" target="_blank"><span class="fa fa-twitter fa-2x" ></span></a>
+			<a style="text-decoration: none; margin-right: 12px; color:blue;"href="#" target="_blank"><span class="fa fa-facebook fa-2x"></a>
+			<a style="text-decoration: none; margin-right: 12px; color:#0d9fde;"href="#" target="_blank"><span class="fa fa-telegram fa-2x"></a>
+			<a style="text-decoration: none; margin-right: 12px; color:#0bbf26;"href="https://wa.link/b1j2e6" target="_blank"><span class="fa fa-whatsapp fa-2x"></a>	
+        </div>
+        </div>
     </footer>
      
 </body>

@@ -37,62 +37,79 @@ body{
     margin: 0;
         
 }
+/*Hiden menu*/
+.fa-bars{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: $btnBackgroundColor;
+    visibility: hidden;
 
-
+    &:hover{
+        @include hovered();
+    }
+}
 /*Top navigator*/
 .header{
     width: 100%;
     height: 55px;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     img{
     height: 40px;
     width: 60px;
     margin-left: 100px;
     }  
-
-    input{
-        justify-self: right;
-        padding: 5px;
-        height: 30px;
-        width: 300px;
-        border-width: 1px 1px;
-        border-radius: 40px;
-
-       &:hover{
-            border: 2px solid $hoverColor;
-
-        }
-        &:focus{
+    .search-area{
+        input{
+            justify-self: right;
+            border-color: $btnBackgroundColor;
+            height: 35px;
+            width: 300px;
+            outline: none;
+            font-size: 16px;
+            border-width: 2px 2px;
+            border-radius: 30px;
             
-            border: 2px solid $hoverColor;
-        }    
+
+            &:hover{
+                border: 2px solid $hoverColor;
+
+            }
+            &:focus{
+                font-family: $mainFont;
+                color:red;
+                font-size: 16px;
+                            
+            }    
+        }
+        button{
+            background: $btnBackgroundColor; 
+            color:$btnFontColor;
+            outline:none;
+            border-radius: 30px;
+            padding: 5px;
+            margin-left: -30px;
+            height: 35px;
+            width: 100px;
+
+            &:hover  {
+                @include hovered();
+                color: $btnFontColor;
+            } 
+        }      
     }
-    .fa-search {
-        justify-self: left;
-        background: $btnBackgroundColor;   
-        margin-left: -20px; 
-        border-width: 1px 1px;
-        border-radius: 40px;
-        width: 100px;
-        height: 30px;
-        text-align: center;
-
-        &:hover  {
-            @include hovered();
-        } 
-    }      
-
         .user-settings{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-
+            justify-items: center;
             position: fixed;
-            top:0;
-            right: 20px;;
-            width: 250px;;
+            top: 5;
+            right: 20px;
+            width: 250px;
+            border: 2px solid lightsalmon;
 
             a{
                 text-decoration: none;
@@ -121,7 +138,7 @@ body{
 
     ul {
         display: grid;
-        grid-template-columns: repeat(4, 150px);
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         margin: 0;
         padding: 0;
     }
@@ -153,7 +170,7 @@ body{
 
 .product-container{ 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-template-rows: repeat(2, 350px);
     justify-content: space-around;
     grid-gap: 20px;
@@ -287,6 +304,141 @@ body{
     }
    footer{
        width: 100%;
-       height: 60px;
-       background: $btnBackgroundColor;
+       height: 120px;
+       
+       .footer-box{
+            background: #424743;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+           
+            div{
+              
+              text-align: center;
+              padding: 10px;
+              color: $btnFontColor;
+           }
+
+           &:nth-child(1){
+                img{
+                    height: 80px;
+                    width: 100px;
+                }
+           }
+           :nth-child(2){
+                ul {
+                    margin: 0;
+                    padding: 0;
+                }
+            
+               li {
+                font-family: "Roboto";
+                letter-spacing: 1px;
+                list-style-type: none;
+                
+                
+                    a {
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: $btnFontColor;
+                    }
+                }
+        
+            }
+            :nth-child(3){
+                span{
+                    margin-top: 15px;
+                    padding: 10px;
+                }
+            }
+        }
+       
    }
+
+   /*Wneh brouser equal 768px*/
+   @media only screen and (max-width: 768px) {
+        .header{
+                display: grid; 
+                grid-template-columns: 150px repeat(2, 1fr);
+            img{
+                margin-left: 10px;
+                width: 80px;
+            }
+            .search-area{
+                input{
+                    width: 75%;
+                }
+           }
+        }
+
+  }    
+
+  /*Wneh browser equal 400px*/
+   @media only screen and (max-width: 400px) {
+    .product-container{
+        width: 100%;
+    }
+    /* Top menu */
+    .header{
+        display: block;
+        height: 55px;
+        img{
+            width: 40px;
+            height: 40px;
+            margin: 0;
+        }
+
+        .search-area {
+             input, button{
+                 display: none;
+             }
+        }
+
+        .user-settings{
+            position: absolute;
+            top: 10px;
+            right: 55px;
+            border: none;
+        }
+        
+    }
+    .menu-bar{
+        display: none;   
+           
+        ul{
+            display: grid;
+            grid-template-columns: 1fr;
+        }   
+    }
+    /*Make open\close button make visible */
+    .fa-bars{
+        visibility: visible;
+    }
+    .page-item{
+        
+       padding: 5px;
+       color: red;
+}    
+
+
+ /*Wneh browser equal 640px*/
+ @media only screen and (max-width: 640px) {
+    /* Top menu */
+    .header{
+        display: grid;
+        grid-template-columns: 50px 300px 270px;
+        img{
+            width: 40px;
+            height: 40px;
+            margin: 0;
+        }
+
+        .search-area {
+            input{
+                width: 70%;
+            }
+       }
+    }
+    .product-container{
+        width: 100%;
+    }
+ }        
