@@ -41,7 +41,7 @@ body{
 /*Hiden menu*/
 .fa-bars{
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 15px;
     color: $btnBackgroundColor;
     visibility: hidden;
@@ -57,16 +57,18 @@ body{
     height: 55px;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:  150px 1fr 250px;
+    
 
     img{
     height: 40px;
     width: 60px;
-    margin-left: 100px;
+    margin-left: 20px;
     }  
     .search-area{
+        text-align: center;
         input{
-            justify-self: right;
+    
             border-color: $btnBackgroundColor;
             height: 35px;
             width: 300px;
@@ -312,7 +314,7 @@ body{
        .footer-box{
             background: $footerBgColor;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
            
             div{
               
@@ -357,50 +359,39 @@ body{
        
    }
 
-   /*Wneh brouser equal 768px*/
-   @media only screen and (max-width: 768px) {
-        .header{
-                display: grid; 
-                grid-template-columns: 150px repeat(2, 1fr);
-            img{
-                margin-left: 10px;
-                width: 80px;
-            }
-            .search-area{
-                input{
-                    width: 75%;
-                }
-           }
-        }
-
-  }    
-
-  /*Wneh browser equal 400px*/
-   @media only screen and (max-width: 400px) {
+    /*Wneh browser equal 500px*/
+   @media only screen and (max-width: 660px) {
     .product-container{
         width: 100%;
     }
     /* Top menu */
     .header{
+        max-width: 360px;
         display: block;
-        height: 55px;
-        img{
-            width: 40px;
-            height: 40px;
-            margin: 0;
+        height: 40px;
+        padding: 0;
+        
+        a{
+            img{
+                width: 60px;
+                height: 40px;
+                margin-left: 10px;
+            }
         }
-
         .search-area {
-             input, button{
-                 display: none;
-             }
+            display: none;
+            
         }
 
         .user-settings{
             position: absolute;
-            top: 10px;
+            top: 0;
             right: 55px;
             border: none;
+            text-align: center;
+            width: 220px;
+            height: 37px;
+            padding: 0;
         }
         
     }
@@ -425,27 +416,93 @@ body{
         }
     }
 }   
+ /*Wneh browser equal 500px*/
+ @media only screen and (max-width: 667px) {
+    .product-container{
+        width: 100%;
+    }
+    /* Top menu */
+    .header{
+        width: 100%;
+        display: block;
+        height: 40px;
+        padding: 0;
+        
+        a{
+            img{
+                width: 60px;
+                height: 40px;
+                margin-left: 10px;
+            }
+        }
+        .search-area {
+            display: none;
+            
+        }
+
+        .user-settings{
+            position: absolute;
+            top: 0;
+            right: 55px;
+            border: none;
+            text-align: center;
+            width: 220px;
+            height: 37px;
+            padding: 0;
+        }
+        
+    }
+    .menu-bar{
+        display: none;   
+           
+        ul{
+            display: grid;
+            grid-template-columns: 1fr;
+        }   
+    }
+    /*Make open\close button make visible */
+    .fa-bars{
+        visibility: visible;
+    } 
+    .pagination{
+        .page-item{
+            padding:0;
+            .page-link{
+                padding: 5px;
+            }
+        }
+    }
+}      
+
+ 
 
 
  /*Wneh browser equal 640px*/
- @media only screen and (max-width: 540px) {
+ @media only screen and (max-width: 840px) {
     /* Top menu */
     .header{
         display: grid;
-        grid-template-columns: 50px 400px 220px;
-        img{
-            width: 30px;
-            height: 30px;
-            margin: 0;
+        grid-template-columns: 60px 350px 200px;
+        height: 40px;
+        padding: 0;
+        
+        a{
+            img{
+                width: 60px;
+                height: 40px;
+                margin-left: 10px;
+            }
         }
-
         .search-area {
             input{
-                width: 30%;
+                width:70%;
             }
-       }
-    }
+            
+        }
+        
+        
     .product-container{
         width: 100%;
     }  
+    }
 }       
