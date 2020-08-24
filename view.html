@@ -6,13 +6,10 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/view.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-
-
-    </style>
     <title>Super Store</title>
 </head>
 <body>
+    <span  onclick="closeFn()" class="fa fa-bars fa-2x"></span>
     <div class="header">    
         <a href="index.html"><img src="./src/icons/Logo.jpg" alt="Logo"></a>
         <input type="text" placeholder="Searching" >
@@ -34,7 +31,6 @@
     </div>
     <div class="grid-container">
         <div class="photo">
-            <div class="slideshow-container"></div>
             <div class="mySlides fade">
                 <div class="numbertext">1 / 4</div>
                 <img src="./src/view/Archos/1.jpg">
@@ -54,13 +50,13 @@
                 <div class="numbertext">4 / 4</div>
                 <img src="./src/view/Archos/4.jpg">
               </div>
-              
+              <div>
               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
               </div>
               <br>
               
-              <div style="text-align:center">
+              <div style="text-align:center;">
                 <span class="dot" onclick="currentSlide(1)"><img src="./src/view/Archos/1.jpg"></span> 
                 <span class="dot" onclick="currentSlide(2)"><img src="./src/view/Archos/2.jpg"></span> 
                 <span class="dot" onclick="currentSlide(3)"><img src="./src/view/Archos/3.jpg"></span> 
@@ -69,18 +65,40 @@
         </div>
         <div class="description">
             <h1>Archos A9 PCtablet</h1>
-            <p>Товар с заранее заданными комплектациями, некоторые из них увеличивают стоимость товара.</p>
+            <p>Product with predefined configurations, some of which increase the cost of the product.</p>
+            <p>Vendore code: gshdjkghs</p>
+            <p>Availability in 1 warehouse</p>
+            <div class="equipment">
+                <p>Equipment</p>
+                <input type="radio" checked>
+                <label for="input">16GB</label>
+                <input type="radio">
+                <label for="input">32GB</label>
+                <input type="radio">
+                <label for="input">64GB</label>
+            </div>
+            <div class="price-box">
+                <p>1500 $</p>
+                <button>Add to basket</button>
+                <button>Buy</button>
+            </div>
         </div>
-        <div class="menu">4</div>
-        <div class="properties">5</div>
-      </div>
-    <script src="./JS/view.js"></script>
+        <div class="menu">
+            <a href="">About product</a>
+            <a href="">Characteristic</a>
+            <a href="">Reviews</a>
+            <a href="">Abailability</a>
+        </div>
+        <div class="properties">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aliquam, quia porro in delectus cumque, architecto placeat suscipit minima veniam provident. Distinctio magnam a, debitis eveniet molestias velit qui libero.
+        </div>
+    </div>
 
     <footer>
         <div class="footer-box">
         <div>
             <img src="./src/icons/Logo.jpg" alt="logo">
-            <h5>We are always with you</h5>
+            <h6>We are always with you</h6>
         </div>
         <div>
             <ul>
@@ -107,7 +125,9 @@
         </div>
         </div>
     </footer>
-     
+    <script src="./JS/view.js"></script>
+    <script src="./JS/index.js"></script>
+
 </body>
 
 </html>

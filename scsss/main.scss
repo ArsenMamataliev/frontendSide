@@ -4,6 +4,7 @@ $productContainerBgColor: #edebe6;
 $productBoxBgColor: White;
 $btnFontColor: white;
 $menuFontColor: White;
+$footerBgColor: #424743;
 $hoverColor: #0f9989;
 $transiton: 1s;
 $mainFont: Roboto;
@@ -46,7 +47,8 @@ body{
     visibility: hidden;
 
     &:hover{
-        @include hovered();
+        color: $hoverColor;
+        transition: $transiton;
     }
 }
 /*Top navigator*/
@@ -109,7 +111,8 @@ body{
             top: 5;
             right: 20px;
             width: 250px;
-            border: 2px solid lightsalmon;
+            border: 2px solid $footerBgColor;
+            border-radius: 40px;
 
             a{
                 text-decoration: none;
@@ -307,7 +310,7 @@ body{
        height: 120px;
        
        .footer-box{
-            background: #424743;
+            background: $footerBgColor;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
            
@@ -412,33 +415,37 @@ body{
     /*Make open\close button make visible */
     .fa-bars{
         visibility: visible;
+    } 
+    .pagination{
+        .page-item{
+            padding:0;
+            .page-link{
+                padding: 5px;
+            }
+        }
     }
-    .page-item{
-        
-       padding: 5px;
-       color: red;
-}    
+}   
 
 
  /*Wneh browser equal 640px*/
- @media only screen and (max-width: 640px) {
+ @media only screen and (max-width: 540px) {
     /* Top menu */
     .header{
         display: grid;
-        grid-template-columns: 50px 300px 270px;
+        grid-template-columns: 50px 400px 220px;
         img{
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             margin: 0;
         }
 
         .search-area {
             input{
-                width: 70%;
+                width: 30%;
             }
        }
     }
     .product-container{
         width: 100%;
-    }
- }        
+    }  
+}       
