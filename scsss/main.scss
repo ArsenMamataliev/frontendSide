@@ -1,14 +1,14 @@
-    /*Variables*/
-$btnBackgroundColor:#02c4ae;
+/*Variables*/
+$btnBackgroundColor:#007bff;
 $productContainerBgColor: #edebe6;
 $productBoxBgColor: White;
 $btnFontColor: white;
 $menuFontColor: White;
-$footerBgColor: #424743;
-$hoverColor: #0f9989;
+$footerBgColor: hsl(0, 0%, 14%);
+$hoverColor: #046bd9;
+$shadowColor: #c9c6bd;
 $transiton: 1s;
 $mainFont: Roboto;
-
 
 /*When button hovered*/
 @mixin hovered(){
@@ -24,7 +24,7 @@ $mainFont: Roboto;
 }
 
 @mixin shadow{
-    box-shadow: 0px 0px 5px 5px #c9c6bd;
+    box-shadow: 0px 0px 5px 5px $shadowColor;
     transition: 0.5s;
 }
 * {
@@ -32,11 +32,11 @@ $mainFont: Roboto;
 }
 
 body{
+    position: relative;
     font-family: $mainFont;
     font-size: 14px;
     padding: 0;
     margin: 0;
-        
 }
 /*Hiden menu*/
 .fa-bars{
@@ -116,15 +116,18 @@ body{
             border: 2px solid $footerBgColor;
             border-radius: 40px;
 
-            a{
+            span{
                 text-decoration: none;
                 color: $btnBackgroundColor;
                 font-size: 25px;
+                padding: 5px;
+
 
                 #shopping-cart-counter, #favorite-item-counter{
                     vertical-align: top ;
                     font-size: 12px;
-
+                    margin-left: -5px;
+                    color:red;
                 } 
                 
                 &:hover {
@@ -134,6 +137,224 @@ body{
         }
         
 }
+
+/*Link container*/
+.linksBox{
+    width: 90%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    
+        a, p{ 
+            display: inline;
+            font-family: $mainFont;
+            font-weight: bold;
+            padding: 5px;;
+        }
+
+        p{
+            color: #007bff;
+        }
+
+}
+
+/*SIGN Up form */
+.register-box{
+    position: absolute;
+    background: fade-out( black, 0.5);    
+    top: 0;
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.form-control {
+	height: 30px;
+	box-shadow: none;
+	color: $productContainerBgColor;
+}
+.form-control, .btn {        
+	border-radius: 3px;
+}
+.signup-form {
+    margin: 30px auto; 
+	width: 450px;
+    font-size: 15px;
+    position: relative;
+
+    .btn-danger{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+   
+}
+.signup-form h2 {
+	color: #636363;
+	margin-top: 25px;
+	position: relative;
+    text-align: center;
+}
+.signup-form h2:before, .signup-form h2:after {
+	content: "";
+	height: 2px;
+	width: 30%;
+	background: #d4d4d4;
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+}	
+.signup-form h2:before {
+	left: 0;
+}
+.signup-form h2:after {
+	right: 0;
+}
+.signup-form .hint-text {
+	color: #999;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.signup-form form {
+	color: #999;
+	border-radius: 3px;
+	background: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 10px 30px;
+}
+.signup-form .form-group {
+	margin-bottom: 20px;
+}
+.signup-form input[type="checkbox"] {
+	margin-top: 3px;
+}
+.btn-register {        
+	font-size: 16px;		
+	min-width: 140px;
+    outline: none !important;
+    background: $btnBackgroundColor;
+    color: $btnFontColor;
+    border-radius: 10px;
+
+    &:hover {
+     @include hovered();
+    }
+}
+.signup-form .row div:first-child {
+	padding-right: 10px;
+}
+.signup-form .row div:last-child {
+	padding-left: 10px;
+}    	
+.signup-form a {
+	color: #fff;
+	text-decoration: underline;
+}
+.signup-form a:hover {
+	text-decoration: none;
+}
+.signup-form form a {
+	color: $btnBackgroundColor;
+	text-decoration: none;
+}	
+.signup-form form a:hover {
+	text-decoration: underline;
+}  
+
+
+/*Login form*/
+.login-box {
+    position: absolute;
+    background: fade-out( black, 0.5);    
+    top: 0;
+    padding-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+    display: none;  
+
+  }
+  
+  .login-form {
+    width: 400px;
+    margin: 30px auto;
+    z-index: 2;
+    position: relative;
+
+    .btn-danger:first-child{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+  }
+  
+  .login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+  }
+  
+  .login-form h2 {
+    margin: 0 0 15px;
+  }
+  
+  .form-control, .login-btn {
+    border-radius: 2px;
+  }
+  
+  .input-group-prepend .fa {
+    font-size: 18px;
+  }
+  
+  .login-btn {
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 40px;
+  }
+  
+  .social-btn .btn {
+    border: none;
+    margin: 10px 3px 0;
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+  
+  .social-btn .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .social-btn .btn-secondary, .social-btn .btn-secondary:active {
+    background: #507cc0 !important;
+  }
+  
+  .social-btn .btn-info, .social-btn .btn-info:active {
+    background: #64ccf1 !important;
+  }
+  
+  .social-btn .btn-danger, .social-btn .btn-danger:active {
+    background: #df4930 !important;
+  }
+  
+  .or-seperator {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    z-index: 2;
+  }
+  
+  .or-seperator i {
+    padding: 0 10px;
+    background: #f7f7f7;
+    position: relative;
+    top: -11px;
+  }
 
 /*Menu bar*/
 .menu-bar {
@@ -275,10 +496,9 @@ body{
 
     /*Go up to page*/
     .fa-arrow-circle-up{
-        position: absolute;
+        position: fixed;
         right: 5px;
-        top: 845px;
-        bottom:60px;
+        bottom: 20% ;
         color: $btnBackgroundColor;
         
         &:hover{
@@ -359,7 +579,7 @@ body{
        
    }
 
-    /*Wneh browser equal 500px*/
+    /*Wneh browser equal 660px*/
    @media only screen and (max-width: 660px) {
     .product-container{
         width: 100%;
@@ -403,6 +623,19 @@ body{
             grid-template-columns: 1fr;
         }   
     }
+    /*Login form*/
+    .login-box{
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .login-form{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0;
+
+        }
+
+    }
     /*Make open\close button make visible */
     .fa-bars{
         visibility: visible;
@@ -415,7 +648,16 @@ body{
             }
         }
     }
-}   
+}  
+
+
+
+
+
+
+
+
+
  /*Wneh browser equal 500px*/
  @media only screen and (max-width: 667px) {
     .product-container{
