@@ -124,10 +124,12 @@ body{
 
 
                 #shopping-cart-counter, #favorite-item-counter{
+                    margin-left: -10px;
+                    border-radius: 50%;
+                    background: red;
                     vertical-align: top ;
-                    font-size: 12px;
-                    margin-left: -5px;
-                    color:red;
+                    font-size: 10px;
+                    color:white;
                 } 
                 
                 &:hover {
@@ -137,6 +139,7 @@ body{
         }
         
 }
+
 
 /*Link container*/
 .linksBox{
@@ -180,10 +183,11 @@ body{
 	border-radius: 3px;
 }
 .signup-form {
-    margin: 30px auto; 
+    margin: 0 auto; 
 	width: 450px;
     font-size: 15px;
     position: relative;
+    text-align: center;
 
     .btn-danger{
         position: absolute;
@@ -223,7 +227,7 @@ body{
 	border-radius: 3px;
 	background: white;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	padding: 10px 30px;
+	padding: 10px 30px 30px 30px;
 }
 .signup-form .form-group {
 	margin-bottom: 20px;
@@ -231,7 +235,8 @@ body{
 .signup-form input[type="checkbox"] {
 	margin-top: 3px;
 }
-.btn-register {        
+.btn-register {   
+    padding: 10px;     
 	font-size: 16px;		
 	min-width: 140px;
     outline: none !important;
@@ -280,10 +285,10 @@ body{
   }
   
   .login-form {
+    position: relative;
     width: 400px;
     margin: 30px auto;
     z-index: 2;
-    position: relative;
 
     .btn-danger:first-child{
         position: absolute;
@@ -492,7 +497,6 @@ body{
             } 
         }
     }
-    /*Pagination*/
 
     /*Go up to page*/
     .fa-arrow-circle-up{
@@ -514,6 +518,7 @@ body{
             background: $btnBackgroundColor;
             color:$btnFontColor;
             text-decoration: none;
+            margin: 3px;
 
             &:hover{
                 color: $btnFontColor;
@@ -714,10 +719,38 @@ body{
             }
         }
     }
+    .register-box{
+        position: relative;
+        width: 100%
+    }
+    .signup-form{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .login-box{
+        position: relative;
+        width: 100%
+    }
+    .login-form{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        form {
+            padding: 5px;
+          }
+    }
+    .social-btn .btn {
+        border: none;
+        opacity: 1;
+        margin-bottom: 20px;
+      }
+
 }      
 
  
-
 
  /*Wneh browser equal 640px*/
  @media only screen and (max-width: 840px) {

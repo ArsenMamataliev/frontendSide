@@ -34,7 +34,30 @@
             <li><a href="contacts.html">Contacts</a></li>
         </ul>
     </div>
-
+<div class="shopping-cart">
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total price: $<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Order now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
     <!-- Login box-->
     <div class="login-box">
         <div class="login-form">
@@ -83,37 +106,37 @@
     </div>
     <!-- Register box-->
     <div class="register-box">
-        <div class="signup-form">  
-        <form action="" method="post">
-            <button type="button" class="btn btn-danger" onclick="closeRegisterBox()">
-                <span>&times;</span>
-                </button>
-            <h2>Register</h2>
-            <p class="hint-text">Create your account. It's free and only takes a minute.</p>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
-                    <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
-                </div>        	
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email" required="required">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
-            </div>        
-            <div class="form-group">
-                <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn-register">Register Now</button>
-            </div>
-            <div class="text-center">Already have an account? <a href="#" onclick="openLoginBoxFromRegisBox()">Sign in</a></div>
-        </form>
-    </div>
+    <div class="signup-form">  
+    <form action="" method="post">
+        <button type="button" class="btn btn-danger" onclick="closeRegisterBox()">
+            <span>&times;</span>
+            </button>
+        <h2>Register</h2>
+        <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+        <div class="form-group">
+            <div class="row">
+                <div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+                <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+            </div>        	
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+        </div>        
+        <div class="form-group">
+            <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-register">Register Now</button>
+        </div>
+        <div class="text-center">Already have an account? <a href="#" onclick="openLoginBoxFromRegisBox()">Sign in</a></div>
+    </form>
+</div>
 </div>
 
 <!-- Link container -->
@@ -136,7 +159,7 @@
             <div class="product-info">
                 <p id="product-name">Archos A9 PCtablet</p>
             <div class="product-price-card">
-                <span id="product-price">12 500 c</span>
+                <span id="product-price">250 $</span>
                 <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
             </div>
         </div>
@@ -152,7 +175,7 @@
             <div class="product-info">
                 <p id="product-name">HP Compaq Mini 5103</p>
             <div class="product-price-card">
-                <span id="product-price">28 500 c</span>
+                <span id="product-price">500 $</span>
                 <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
             </div>
          </div>
@@ -168,7 +191,7 @@
             <div class="product-info">
                 <p id="product-name">Monoblock MSI Wind Top AP1920 Black</p>
             <div class="product-price-card">
-                <span id="product-price">16 560 c</span>
+                <span id="product-price">350 $</span>
                 <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
             </div>
         </div>
@@ -184,7 +207,7 @@
             <div class="product-info">
                 <p id="product-name">HP Compaq Mini 5103</p>
             <div class="product-price-card">
-                <span id="product-price">17 570 c</span>
+                <span id="product-price">400 $</span>
                 <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
             </div>
         </div>
