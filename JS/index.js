@@ -38,16 +38,20 @@ function closeFn() {
     closeLoginBox();
     openRegisterBox()
   }
+  //open Shopping Cart page
+  function shoppingCart(){
+    window.open("shopping-cart.html");
+  }
 
   let product = [
     {
-      name: "Archos A9 PCtablet",
+      name: "ArchosA9PCtablet",
       tag: "Archos",
       price: 250,
       inCart: 0
     },
     {
-      name: "HP Compaq Mini 5103",
+      name: "Laptop HP Compaq Mini 5103",
       tag: "HP",
       price: 500,
       inCart: 0
@@ -59,8 +63,8 @@ function closeFn() {
       inCart: 0
     },
     {
-      name: "HP Compaq Mini 5103",
-      tag: "HP",
+      name: "Laptop Samsung 300U1A-A01",
+      tag: "Samsung",
       price: 400,
       inCart: 0
     },
@@ -73,7 +77,7 @@ function closeFn() {
     {
       name: "New Apple iMac Pro",
       tag: "Apple",
-      price: 499.99,
+      price: 499,
       inCart: 0
     },
     {
@@ -82,7 +86,6 @@ function closeFn() {
       price: 3500,
       inCart: 0
     },
-    // Laptops page 2 products
     {
       name: "Samsung 300V5A-S0L Orange",
       tag: "Samsung",
@@ -107,7 +110,6 @@ function closeFn() {
       price: 250,
       inCart: 0
     },
-    // Phone page products
     {
       name: "HTC A6380 Gratia Green",
       tag: "HTC",
@@ -132,14 +134,14 @@ function closeFn() {
       price: 100,
       inCart: 0
     }
-  ]
+  ];
   
-var carts = document.querySelectorAll('#add-to-basket');
+// var carts = document.querySelectorAll('#add-to-basket');
 
-for(i= 0; i < carts.length; i++){
-  carts[i].addEventListener('click', ()=>cartNumbers(product[i])
-  )}
-
+// for( i = 0; i < carts.length; i++){
+//   carts[i].addEventListener('click', () => cartNumbers(product[n])
+//   )}
+//Product quantity counter
   function onLoadCartNumbers(){
     let productNumber = localStorage.getItem('cartNumbers');
     if(productNumber){
@@ -147,7 +149,6 @@ for(i= 0; i < carts.length; i++){
     }
   }
   function cartNumbers(product) {
-    alert(product);
     let productNumber = localStorage.getItem('cartNumbers');
     productNumber = parseInt(productNumber);
     if (productNumber){
@@ -157,5 +158,75 @@ for(i= 0; i < carts.length; i++){
         localStorage.setItem('cartNumbers', 1);
         document.querySelector('#shopping-cart-counter').textContent = 1;
       }
+
+      setItems(product);
+      totalCost(product);
     }
+
+function setItems(product){
+  let cartItems = localStorage.getItem('productInCarts');
+  cartItems = JSON.parse(cartItems);
+  if ( cartItems != null ) {
+    if ( cartItems[product.tag] == undefined ){
+      cartItems = {
+        ...cartItems,
+        [product.tag]: product
+      }
+    }
+      cartItems[product.tag].inCart += 1; 
+    }else{
+      product.inCart = 1;
+      cartItems = {
+        [product.tag] : product
+    }
+  } 
+  localStorage.setItem('productInCarts', JSON.stringify(cartItems));
+}
+
+function totalCost(product){
+let cardCost = localStorage.getItem('totalCost');
+if (cardCost != null){
+    cardCost = parseInt(cardCost);
+    localStorage.setItem('totalCost', cardCost + product.price)
+} else {
+    localStorage.setItem('totalCost', product.price)
+}
+}
+
+function displayCart(){
+  let cartItems = localStorage.getItem('productInCarts');
+  cartItems = JSON.parse(cartItems); 
+  let productContainer = document.querySelector('.products');
+  let cardCost = localStorage.getItem('totalCost');
+  if (cartItems &&  productContainer){
+    productContainer.innerHTML = '';
+    Object.values(cartItems).map(item=> {
+      productContainer.innerHTML += `
+      <div class = "product-box">
+      <div class = "product"> 
+        <span class="btn btn-danger"></span>
+        <img src = "./src/products/${item.name}.jpg"> 
+        <span>${item.name}</span> 
+      </div>
+      <div class = "price">$${item.price},00</div>
+      <div class="quantity"> 
+        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+        <span> ${item.inCart}</span>
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+      </div>
+      <div class="total"> 
+      <span> $${item.inCart * item.price},00</span>
+      </div>
+      </div>
+      `;
+    });
+    productContainer.innerHTML += `
+  <div class = "basketTotalContainer">
+    <p class = "basketTotalTitle">Total amount</p>
+    <p class = "basketTotal"> $${cardCost},00 </p> 
+  </div>
+    `
+  }
+}
 onLoadCartNumbers();
+displayCart();

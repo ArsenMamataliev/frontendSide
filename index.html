@@ -20,7 +20,7 @@
              <button>Search</button>
         </div>
         <div class="user-settings">
-            <span class="fa fa-shopping-cart" onclick="shoppingCart()"> <span id="shopping-cart-counter">0</span></span>
+            <span class="fa fa-shopping-cart" onclick="shoppingCart()"><span id="shopping-cart-counter">0</span></span>
             <span class="fa fa-heart" onclick="favoriteItem()"><span id="favorite-item-counter">0</span></span>
             <span class="fa fa-user" onclick="openRegisterBox()"></span>
             <span class="fa fa-sign-in" onclick="openLoginBox()"></span>
@@ -150,7 +150,7 @@
     <div class="product-container">
            <div class="product">
             <div class="product-photo">
-            <a href="view.html"><img src="src/Laptops/ArchosA9PCtablet.jpg" alt="ArchosA9PCtablet"></a>
+            <a href="view.html"><img src="src/products/ArchosA9PCtablet.jpg" alt="ArchosA9PCtablet"></a>
             </div>
             <div class="product-category-name">
                 <small>Archos</small>
@@ -160,29 +160,29 @@
                 <p id="product-name">Archos A9 PCtablet</p>
             <div class="product-price-card">
                 <span id="product-price">250 $</span>
-                <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+                <span id="add-to-basket" onclick="cartNumbers(product[0])"><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></span>
             </div>
         </div>
         </div>
         <div class="product"> 
             <div class="product-photo">
-            <a href="./view.html"><img src="src/Laptops/Ноутбук HP Compaq Mini 5103.jpg" alt="Ноутбук HP Compaq Mini 5103"></a>
+            <a href="./view.html"><img src="src/products/Laptop HP Compaq Mini 5103.jpg" alt="Laptop HP Compaq Mini 5103"></a>
             </div>
             <div class="product-category-name">
                 <small>HP</small>
                 <span class="fa fa-heart fa-2x"></span>
             </div>
             <div class="product-info">
-                <p id="product-name">HP Compaq Mini 5103</p>
+                <p id="product-name">Laptop HP Compaq Mini 5103</p>
             <div class="product-price-card">
                 <span id="product-price">500 $</span>
-                <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+                <span id="add-to-basket" onclick="cartNumbers(product[1])"><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></span>
             </div>
          </div>
         </div>
         <div class="product">
             <div class="product-photo">
-            <a href=""><img src="src/Laptops/Моноблок MSI Wind Top AP1920 Black.jpg" alt="Моноблок MSI Wind Top AP1920 Black"></a>
+            <a href=""><img src="src/products/Monoblock MSI Wind Top AP1920 Black.jpg" alt="Monoblock MSI Wind Top AP1920 Black"></a>
             </div>
             <div class="product-category-name">
                 <small>MSI Wind</small>
@@ -192,29 +192,29 @@
                 <p id="product-name">Monoblock MSI Wind Top AP1920 Black</p>
             <div class="product-price-card">
                 <span id="product-price">350 $</span>
-                <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+                <span id="add-to-basket" onclick="cartNumbers(product[2])"><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></span>
             </div>
         </div>
         </div>
         <div class="product">
             <div class="product-photo">
-            <a href=""><img src="src/Laptops/Ноутбук Samsung 300U1A-A01.jpg" alt="Ноутбук Samsung 300U1A-A01"></a>
+            <a href=""><img src="src/products/Laptop Samsung 300U1A-A01.jpg" alt="Laptop Samsung 300U1A-A01"></a>
             </div>
             <div class="product-category-name">
                 <small>Samsung</small>
                 <span class="fa fa-heart fa-2x"></span>
             </div>
             <div class="product-info">
-                <p id="product-name">HP Compaq Mini 5103</p>
+                <p id="product-name">Laptop Samsung 300U1A-A01</p>
             <div class="product-price-card">
                 <span id="product-price">400 $</span>
-                <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+                <span id="add-to-basket" onclick="cartNumbers(product[3])"><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></span>
             </div>
         </div>
         </div>
         <div class="product">
                 <div class="product-photo">
-                <a href=""><img src="src/Laptops/Apple iMac with Retina 5K Display.jpg" alt="Apple iMac with Retina 5K Display"></a>
+                <a href=""><img src="src/products/Apple iMac with Retina 5K Display.jpg" alt="Apple iMac with Retina 5K Display"></a>
                 </div>
                 <div class="product-category-name">
                     <small>Apple</small>
@@ -224,13 +224,13 @@
                     <p id="product-name">Apple iMac with Retina 5K Display</p>
                 <div class="product-price-card">
                     <span id="product-price">2 500 $</span>
-                    <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+                    <span id="add-to-basket" onclick="cartNumbers(product[4])"><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></span>
                 </div>
             </div>
             </div>
         <div class="product">
             <div class="product-photo">
-            <a href=""><img src="src/Laptops/New Apple iMac Pro.png" alt="New Apple iMac Pro"></a>
+            <a href=""><img src="src/products/New Apple iMac Pro.jpg" alt="New Apple iMac Pro"></a>
             </div>
             <div class="product-category-name">
                 <small>Apple</small>
@@ -239,14 +239,14 @@
             <div class="product-info">
                 <p id="product-name">New Apple iMac Pro</p>
             <div class="product-price-card">
-                <span id="product-price">499. 99 $</span>
-                <span id="add-to-basket"><a href=""><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+                <span id="product-price">499 $</span>
+                <span id="add-to-basket" onclick="cartNumbers(product[5])"><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></span>
             </div>
         </div>
         </div>
         <div class="product">
             <div class="product-photo">
-            <a href=""><img src="src/Laptops/Microsoft Surface Studio 2.jpg" alt="Microsoft Surface Studio 2"></a>
+            <a href=""><img src="src/products/Microsoft Surface Studio 2.jpg" alt="Microsoft Surface Studio 2"></a>
             </div>
             <div class="product-category-name">
                 <small>Microsoft</small>
@@ -256,7 +256,7 @@
                 <p id="product-name">Microsoft Surface Studio 2</p>
             <div class="product-price-card">
                 <span id="product-price">3 500 $</span>
-                <span id="add-to-basket"><a href="" ><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></a></span>
+                <span id="add-to-basket" onclick="cartNumbers(product[6])"><i class="fa fa-shopping-cart" style="font-size:16px;color: white"></i></span>
             </div>
         </div>
         </div> 
