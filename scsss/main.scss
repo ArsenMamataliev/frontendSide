@@ -6,6 +6,7 @@ $btnFontColor: white;
 $menuFontColor: White;
 $footerBgColor: hsl(0, 0%, 14%);
 $hoverColor: #046bd9;
+$redBgColor: red;
 $shadowColor: #c9c6bd;
 $transiton: 1s;
 $mainFont: Roboto;
@@ -53,11 +54,11 @@ body{
 }
 /*Top navigator*/
 .header{
+    padding-top: 10px;
     width: 100%;
     height: 55px;
-    padding: 10px;
     display: grid;
-    grid-template-columns:  150px 1fr 250px;
+    grid-template-columns:  150px 1fr 290px;
     
 
     img{
@@ -68,16 +69,14 @@ body{
     .search-area{
         text-align: center;
         input{
-    
+            padding: 0 20px;
+            padding: 5px;
             border-color: $btnBackgroundColor;
             height: 35px;
             width: 300px;
             outline: none;
-            font-size: 16px;
-            border-width: 2px 2px;
-            border-radius: 30px;
+            border-radius: 40px;
             
-
             &:hover{
                 border: 2px solid $hoverColor;
 
@@ -85,7 +84,6 @@ body{
             &:focus{
                 font-family: $mainFont;
                 color:red;
-                font-size: 16px;
                             
             }    
         }
@@ -93,11 +91,12 @@ body{
             background: $btnBackgroundColor; 
             color:$btnFontColor;
             outline:none;
-            border-radius: 30px;
+            border-radius: 40px;
             padding: 5px;
-            margin-left: -30px;
-            height: 35px;
+            margin-left:-30px;
+            height: 37px;
             width: 100px;
+            vertical-align: center;
 
             &:hover  {
                 @include hovered();
@@ -152,7 +151,7 @@ body{
         a, p{ 
             display: inline;
             font-family: $mainFont;
-            font-weight: bold;
+            font-size: 14px;
             padding: 5px;;
         }
 
@@ -486,9 +485,10 @@ body{
                 border-radius: 50px;
                 cursor: pointer;
                 
-                &:hover {
-                    @include hovered();
-                    }
+                &:focus {
+                    outline: red auto 5px; 
+                }
+               
                 a{
                     text-decoration: none;
                     color: $btnFontColor;
@@ -654,13 +654,6 @@ body{
         }
     }
 }  
-
-
-
-
-
-
-
 
 
  /*Wneh browser equal 500px*/

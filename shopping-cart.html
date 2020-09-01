@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
         <title>Super Store | Shopping</title>
 </head>
 <body>
@@ -123,17 +124,16 @@
 </div>
 </div>
 
-<div class="products-container">
-    <div class="product-header">
-        <h5 class="product-title">PRODUCT</h5>
-        <h5 class="price">PRICE</h5>
-        <h5 class="quantity">QUANTITY</h5>
-        <h5 class="total">TOTAl</h5>
+<div class="shoppingCartContainer">
+    <h5>Shopping cart</h5>
+    <div class="productList">
     </div>
-    <div class="products">
-        
+        <div class= "orderBtns">
+            <button class="btn btn-primary">Order now</button>
+            <button class="btn btn-primary">Order by WhatsApp</button>
+            <button id="clearAll" onclick="clearAll()" class="btn btn-danger"> Clear all</button>
+        </div>
     </div>
-</div>
 
 
 

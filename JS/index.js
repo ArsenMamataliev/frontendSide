@@ -40,7 +40,7 @@ function closeFn() {
   }
   //open Shopping Cart page
   function shoppingCart(){
-    window.open("shopping-cart.html");
+    window.location.href = "shopping-cart.html";
   }
 
   let product = [
@@ -196,37 +196,45 @@ if (cardCost != null){
 function displayCart(){
   let cartItems = localStorage.getItem('productInCarts');
   cartItems = JSON.parse(cartItems); 
-  let productContainer = document.querySelector('.products');
+  let shoppingCartContainer = document.querySelector('.productList');
   let cardCost = localStorage.getItem('totalCost');
-  if (cartItems &&  productContainer){
-    productContainer.innerHTML = '';
+  if (cartItems &&  shoppingCartContainer){
+    shoppingCartContainer.innerHTML = '';
     Object.values(cartItems).map(item=> {
-      productContainer.innerHTML += `
-      <div class = "product-box">
-      <div class = "product"> 
-        <span class="btn btn-danger"></span>
-        <img src = "./src/products/${item.name}.jpg"> 
-        <span>${item.name}</span> 
-      </div>
-      <div class = "price">$${item.price},00</div>
-      <div class="quantity"> 
-        <i class="fa fa-minus-circle" aria-hidden="true"></i>
-        <span> ${item.inCart}</span>
-        <i class="fa fa-plus-circle" aria-hidden="true"></i>
-      </div>
-      <div class="total"> 
-      <span> $${item.inCart * item.price},00</span>
-      </div>
-      </div>
-      `;
+      shoppingCartContainer.innerHTML += `
+        <div class ="productItem">
+            <div class="productInfo">
+            <ion-icon name="close-circle-outline"></ion-icon>
+                <img src="./src/products/${item.name}.jpg" alt="${item.name}">
+                <span class="productName">${item.name}</span>
+            </div>
+            <span class="productPrice">$${item.price},00</span>
+            <span>${item.inCart}</span>
+            <span class="productTotal">$${item.price * item.inCart},00</span>
+        </div>
+`;
     });
-    productContainer.innerHTML += `
-  <div class = "basketTotalContainer">
-    <p class = "basketTotalTitle">Total amount</p>
-    <p class = "basketTotal"> $${cardCost},00 </p> 
-  </div>
+    shoppingCartContainer.innerHTML += `
+    <div class="shoppingCartTotal">
+     <p>Total price: <strong>$${cardCost},00</strong></p> 
+    </div>
     `
+  }
+  else{
+    shoppingCartContainer.innerHTML = `<p id="shoppingCartNotification"> Shopping cart empty! </p>`;
   }
 }
 onLoadCartNumbers();
 displayCart();
+
+//Clear localStorage
+function clearAll(){
+  localStorage.clear();
+  location.reload();
+}
+
+//Remove product
+
+function removeProduct(e){
+  e.target.delete();
+}
