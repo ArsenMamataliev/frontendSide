@@ -629,12 +629,10 @@ body{
         }   
     }
     /*Login form*/
-    .login-box{
-        display: grid;
+    .login-box {
         grid-template-columns: 1fr;
 
         .login-form{
-            display: grid;
             grid-template-columns: 1fr;
             margin: 0;
 

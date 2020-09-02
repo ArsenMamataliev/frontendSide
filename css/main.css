@@ -631,14 +631,10 @@ footer .footer-box :nth-child(3) span {
   }
   /*Login form*/
   .login-box {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
   .login-box .login-form {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     margin: 0;
