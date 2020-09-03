@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/view.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Super Store</title>
 </head>
 <body>
@@ -17,20 +22,109 @@
              <button>Search</button>
         </div>
         <div class="user-settings">
-            <a href=""><span class="fa fa-shopping-cart"></span><span id="shopping-cart-counter">0</span></a>
-            <a href=""><span class="fa fa-heart"></span><span id="favorite-item-counter">0</span></a>
-            <a href=""><span class="fa fa-user"></span></a>
-            <a href=""><span class="fa fa-sign-in"></span></a>
-        </div>
+            <span class="fa fa-shopping-cart" onclick="shoppingCart()"><span id="shopping-cart-counter">0</span></span>
+            <span class="fa fa-heart" onclick="favoriteItem()"><span id="favorite-item-counter">0</span></span>
+            <span class="fa fa-user" onclick="openRegisterBox()"></span>
+            <span class="fa fa-sign-in" onclick="openLoginBox()"></span>
+        </div>   
     </div>
-    <div class="menu-bar">
+    <div class="menu-bar" id="menuBar">
         <ul>
             <li class="active"><a href="index.html">Laptops</a></li>
             <li><a href="phones.html">Phones</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contacts.html">Contacts</a></li>
         </ul>
+    </div> 
+    <!-- Login box-->
+    <div class="login-box">
+        <div class="login-form">
+            <button type="button" class="btn btn-danger" onclick="closeLoginBox()">
+                <span>&times;</span>
+              </button>
+            <form action="#" method="post">
+                <h2 class="text-center">Sign in</h2>   
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <span class="fa fa-user"></span>
+                            </span>                    
+                        </div>
+                        <input type="email" class="form-control" name="email" placeholder="Email" required="required">				
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-lock"></i>
+                            </span>                    
+                        </div>
+                        <input type="password" class="form-control" name="password" placeholder="Password" required="required">				
+                    </div>
+                </div>        
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+                <div class="clearfix">
+                    <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
+                    <a href="#" class="float-right">Forgot Password?</a>
+                </div>
+                <div class="or-seperator"><i>or</i></div>
+                <p class="text-center">Login with your social media account</p>
+                <div class="text-center social-btn">
+                    <a href="#" class="btn btn-secondary"><i class="fa fa-facebook"></i>&nbsp; Facebook</a>
+                    <a href="#" class="btn btn-info"><i class="fa fa-twitter"></i>&nbsp; Twitter</a>
+                    <a href="#" class="btn btn-danger"><i class="fa fa-google"></i>&nbsp; Google</a>
+                </div>
+                <p class="text-center text-muted small">Don't have an account? <a onclick="openRegisBoxFromLoginBox()">Sign up here!</a></p>
+            </form>
+        </div>
     </div>
+    <!-- Register box-->
+    <div class="register-box">
+    <div class="signup-form">  
+    <form action="" method="post">
+        <button type="button" class="btn btn-danger" onclick="closeRegisterBox()">
+            <span>&times;</span>
+            </button>
+        <h2>Register</h2>
+        <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+        <div class="form-group">
+            <div class="row">
+                <div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+                <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+            </div>        	
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+        </div>        
+        <div class="form-group">
+            <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-register">Register Now</button>
+        </div>
+        <div class="text-center">Already have an account? <a  onclick="openLoginBoxFromRegisBox()">Sign in</a></div>
+    </form>
+</div>
+</div>
+
+<!-- Link container -->
+<div class="linksBox">
+    <div class="links">
+        <a href="index.html">Home</a><p> &gt; </p>
+        <a href="index.html">Laptops</a><p> &gt; </p>
+        <p>Archos A9 PCtablet</p>
+    </div>   
+</div>
     <div class="grid-container">
         <div class="photo">
             <div class="mySlides fade">
@@ -70,29 +164,19 @@
             <p>Product with predefined configurations, some of which increase the cost of the product.</p>
             <p>Vendore code: gshdjkghs</p>
             <p>Availability in 1 warehouse</p>
-            <div class="equipment">
-                <p>Equipment</p>
-                <input type="radio" checked>
-                <label for="input">16GB</label>
-                <input type="radio">
-                <label for="input">32GB</label>
-                <input type="radio">
-                <label for="input">64GB</label>
-            </div>
+        
             <div class="price-box">
                 <p>1500 $</p>
                 <button>Add to basket</button>
                 <button>Buy</button>
             </div>
         </div>
-        <div class="menu">
-            <a href="">About product</a>
-            <a href="">Characteristic</a>
-            <a href="">Reviews</a>
-            <a href="">Abailability</a>
-        </div>
         <div class="properties">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aliquam, quia porro in delectus cumque, architecto placeat suscipit minima veniam provident. Distinctio magnam a, debitis eveniet molestias velit qui libero.
+            <h3>About product</h3>
+            <h3>Characteristic<h3>
+            <h3>Reviews</h3>
+            <h3>Abailability</h3>
+           
         </div>
     </div>
 

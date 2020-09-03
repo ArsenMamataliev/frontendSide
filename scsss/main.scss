@@ -654,8 +654,8 @@ body{
 }  
 
 
- /*Wneh browser equal 500px*/
- @media only screen and (max-width: 667px) {
+ /*Wneh browser equal less than 667px*/
+ @media only screen and (max-width: 666px) {
     .product-container{
         width: 100%;
     }
@@ -737,6 +737,11 @@ body{
         border: none;
         opacity: 1;
         margin-bottom: 20px;
+      }
+
+      .fa-arrow-circle-up{
+          bottom: 20px;
+          font-size: 10px;
       }
 
 }      

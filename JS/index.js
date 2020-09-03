@@ -222,6 +222,8 @@ function displayCart(){
   }
   else{
     shoppingCartContainer.innerHTML = `<p id="shoppingCartNotification"> Shopping cart empty! </p>`;
+    //Hide block when shopping cart empty
+    document.querySelector('.orderBtns').style.display = 'none';
   }
 }
 onLoadCartNumbers();
