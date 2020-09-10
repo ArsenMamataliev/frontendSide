@@ -236,7 +236,22 @@ function clearAll(){
 }
 
 //Remove product
-
 function removeProduct(e){
   e.target.delete();
+}
+
+
+//Increase quantity of product
+function increaseQuantity(){
+  let quantity = document.querySelector('.productQuantity').value++;
+  let price = document.querySelector('#price').textContent;
+}
+
+//Decrease quantity of product
+function decraeseQuantity(){
+  let quantity = document.querySelector('.productQuantity').value--;
+  let price = document.querySelector('#price').textContent;
+  
+ 
+  
 }

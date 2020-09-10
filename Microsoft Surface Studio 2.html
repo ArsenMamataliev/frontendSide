@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/view.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <title>Super Store</title>
 </head>
 <body>
@@ -122,29 +122,29 @@
     <div class="links">
         <a href="index.html">Home</a><p> &gt; </p>
         <a href="index.html">Laptops</a><p> &gt; </p>
-        <p>Archos A9 PCtablet</p>
+        <p>Microsoft Surface Studio 2</p>
     </div>   
 </div>
     <div class="grid-container">
         <div class="photo">
-            <div class="mySlides fade">
+            <div class="mySlides">
                 <div class="numbertext">1 / 4</div>
-                <img src="./src/view/Archos/1.jpg">
+                <img src="./src/view/Microsoft Surface Studio 2/1.jpg">
               </div>
               
-              <div class="mySlides fade">
+              <div class="mySlides">
                 <div class="numbertext">2 / 4</div>
-                <img src="./src/view/Archos/2.jpg" >
+                <img src="./src/view/Microsoft Surface Studio 2/2.jpg" >
               </div>
               
-              <div class="mySlides fade">
+              <div class="mySlides">
                 <div class="numbertext">3 / 4</div>
-                <img src="./src/view/Archos/3.jpg">
+                <img src="./src/view/Microsoft Surface Studio 2/3.jpg">
               </div>
 
-              <div class="mySlides fade">
+              <div class="mySlides">
                 <div class="numbertext">4 / 4</div>
-                <img src="./src/view/Archos/4.jpg">
+                <img src="./src/view/Microsoft Surface Studio 2/4.jpg">
               </div>
               <div>
               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -153,30 +153,81 @@
               <br>
               
               <div style="text-align:center;">
-                <span class="dot" onclick="currentSlide(1)"><img src="./src/view/Archos/1.jpg"></span> 
-                <span class="dot" onclick="currentSlide(2)"><img src="./src/view/Archos/2.jpg"></span> 
-                <span class="dot" onclick="currentSlide(3)"><img src="./src/view/Archos/3.jpg"></span> 
-                <span class="dot" onclick="currentSlide(4)"><img src="./src/view/Archos/4.jpg"></span> 
+                <span class="dot" onclick="currentSlide(1)"><img src="./src/view/Microsoft Surface Studio 2/1.jpg"></span> 
+                <span class="dot" onclick="currentSlide(2)"><img src="./src/view/Microsoft Surface Studio 2/2.jpg"></span> 
+                <span class="dot" onclick="currentSlide(3)"><img src="./src/view/Microsoft Surface Studio 2/3.jpg"></span> 
+                <span class="dot" onclick="currentSlide(4)"><img src="./src/view/Microsoft Surface Studio 2/4.jpg"></span> 
               </div>
         </div>
-        <div class="description">
-            <h1>Archos A9 PCtablet</h1>
-            <p>Product with predefined configurations, some of which increase the cost of the product.</p>
-            <p>Vendore code: gshdjkghs</p>
-            <p>Availability in 1 warehouse</p>
         
+        <div class="description">
+            <h1>Microsoft Surface Studio 2</h1>
+            <p>Product with predefined configurations, some of which increase the cost of the product.</p>
+            <div>
+                <p>Vendore code: 1964597avsd</p>
+                <p>Availability in 1 warehouse</p>
+            </div>
             <div class="price-box">
-                <p>1500 $</p>
-                <button>Add to basket</button>
-                <button>Buy</button>
+                <p> Price: <span id="price">3500</span> $</p>
+                <span id="favoriteProduct" class="fa fa-heart fa-2x red"></span>
+                <button type="button" id="superplus" onclick="decraeseQuantity()">
+                    <span class="icon-minus"><i class="fa fa-minus"></i></span>
+                    </button>
+                    <input type="number" class="productQuantity" min="1" max="100" value="1">
+                <button type="button" id="superplus" onclick="increaseQuantity()">
+                    <span class="icon-plus"><i class="fa fa-plus"></i></span>
+                    </button>
+                    <br>
+                <button type="button" class="btn btn-danger"  onclick="cartNumbers(product[6])">Add to basket</button>
+                <button type="button" class="btn btn-success"  onclick="oneclickOrder(product[6])">One click order</button>
             </div>
         </div>
         <div class="properties">
-            <h3>About product</h3>
-            <h3>Characteristic<h3>
-            <h3>Reviews</h3>
-            <h3>Abailability</h3>
-           
+            <div id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        About product
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Characteristic
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Abailability
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 
@@ -204,16 +255,14 @@
         </div>
         <div> 
             <h6> Please visit us</h6>
-			<a style="text-decoration: none; margin-right: 12px;color:#0d9fde;"href="#" target="_blank"><span class="fa fa-twitter fa-2x" ></span></a>
-			<a style="text-decoration: none; margin-right: 12px; color:blue;"href="#" target="_blank"><span class="fa fa-facebook fa-2x"></a>
-			<a style="text-decoration: none; margin-right: 12px; color:#0d9fde;"href="#" target="_blank"><span class="fa fa-telegram fa-2x"></a>
-			<a style="text-decoration: none; margin-right: 12px; color:#0bbf26;"href="https://wa.link/b1j2e6" target="_blank"><span class="fa fa-whatsapp fa-2x"></a>	
+			<a style="text-decoration: none; margin-right: 10px;color:#0d9fde;"href="#" target="_blank"><span class="fa fa-twitter fa-2x" ></span></a>
+			<a style="text-decoration: none; margin-right: 10px; color:blue;"href="#" target="_blank"><span class="fa fa-facebook fa-2x"></a>
+			<a style="text-decoration: none; margin-right: 10px; color:#0d9fde;"href="#" target="_blank"><span class="fa fa-telegram fa-2x"></a>
+			<a style="text-decoration: none; margin-right: 10px; color:#0bbf26;"href="https://wa.link/b1j2e6" target="_blank"><span class="fa fa-whatsapp fa-2x"></a>	
         </div>
         </div>
-    </footer>
+    </footer> 
     <script src="./JS/view.js"></script>
     <script src="./JS/index.js"></script>
-
 </body>
-
 </html>

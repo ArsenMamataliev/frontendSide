@@ -1,4 +1,3 @@
-@use 'main';
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -111,12 +110,6 @@ body {
   .shoppingCartTotal {
     margin-right: 10px;
     font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .shoppingCartContainer {
-    width: 90%;
   }
 }
 /*# sourceMappingURL=shoppingCart.css.map */
