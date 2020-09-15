@@ -100,6 +100,7 @@ body {
   width: 250px;
   border: 2px solid #242424;
   border-radius: 40px;
+  z-index: 1;
 }
 
 .header .user-settings span {
