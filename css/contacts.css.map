@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../storeFrontendSide/scsss/contacts.scss"
+        "../scsss/contacts.scss"
     ],
     "names": [],
     "file": "contacts.css"
