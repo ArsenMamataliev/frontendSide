@@ -177,6 +177,11 @@
     padding: 0;
 }
 
+#oneClickorderProductView{
+    width: 100%;
+    text-align: center;
+}
+
  /*Wneh browser equal 400px*/
  @media only screen and (max-width: 650px) {
     .grid-container{
@@ -201,10 +206,5 @@
         margin: 5px;      
     }  
 
-    }
-.column{
-    input{
-        width: 90%;
-    }
 }     
 }

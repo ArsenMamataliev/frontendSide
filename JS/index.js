@@ -236,31 +236,39 @@ function clearAll(){
 }
 
 //Remove product
-function removeProduct(e){
-  e.target.delete();
+function deleteProduct(){
+alert('hi');
 }
 
 
 //Increase quantity of product
-function increaseQuantity(){
-  let quantity = document.querySelector('.productQuantity').value++;
+function increaseQuantity(){ 
+  let quantity = document.querySelector('.productQuantity').value;
+  quantity++;
+  document.querySelector('.productQuantity').value++;
   let price = document.querySelector('#price').textContent;
+  price = parseInt(price);
+  ( quantity >= 2)? document.querySelector('#price').textContent = `${(quantity * price) / (quantity - 1)}`: document.querySelector('#price').textContent = `${quantity * price}`;
 }
-
 //Decrease quantity of product
 function decraeseQuantity(){
-  let quantity = document.querySelector('.productQuantity').value--;
+  let quantity = document.querySelector('.productQuantity').value;
+  (quantity == 1)? document.querySelectorAll('#superplus')[2].disabled = true: quantity--;
+  document.querySelector('.productQuantity').value--;
   let price = document.querySelector('#price').textContent;
+  price = parseInt(price);
+  ( quantity >= 2)? document.querySelector('#price').textContent = `${(quantity * price) / (quantity + 1)}`: document.querySelector('#price').textContent = `${(quantity * price)/2}`;
 }
-//One click order box
+//Create one click order box
 function oneclickOrder(product){
   let oneClickOrderBox = document.querySelector('#oneClickorderProductView');
   oneClickOrderBox.innerHTML = `
-  <div class="sellingProduct" style="width: 60%; text-align: center; padding: 0 20px; text-align:center"> 
-  <img src="./src/products/${product.name}.jpg" alt="${product.name}" style="max-width: 200px;
-  max-height: 100px; position: relative;">
+  <div class="sellingProduct" style="width: 100%; text-align: center; padding: 0 20px; text-align:center"> 
+  <img src="./src/products/${product.name}.jpg" alt="${product.name}" style="max-width: 300px;
+  max-height: 150px; position: relative;">
   <p>${product.name}</p>
   <p style="color:red; font-size: 18px; line-height: 0;">$${product.price},00</p>
   </div>
   `;
 }
+let openRequest = indexedDB.open("store", 1);

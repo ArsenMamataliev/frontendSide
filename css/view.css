@@ -1,6 +1,10 @@
 /*Variables*/
 /*When button hovered*/
 /*When product photo hovered*/
+.body {
+  z-index: -1;
+}
+
 .grid-container {
   display: -ms-grid;
   display: grid;
@@ -9,6 +13,7 @@
       grid-template-areas: 'photo description'  'properties properties';
   background-color: #edebe6;
   padding: 10px;
+  position: relative;
   width: 90%;
   margin: 0 auto;
   height: auto;
@@ -128,7 +133,7 @@
   background: white;
   width: 100%;
   padding: 30px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .description h1 {
@@ -200,8 +205,13 @@
   padding: 0;
 }
 
+#oneClickorderProductView {
+  width: 100%;
+  text-align: center;
+}
+
 /*Wneh browser equal 400px*/
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 650px) {
   .grid-container {
     width: 100%;
     padding: 10px 0;
